@@ -5,7 +5,10 @@
         "sourceMap": true
     },
     "include": [
-        "./src/**/*.ts"
+        "./src/**/*.ts",
+        "src/server.test.mjs",
+        "src/server.mjs",
+        "src/app.mjs"
     ],
     "exclude": [
         "./src/**/*.test.ts"
