@@ -1,6 +1,14 @@
 {
-  "scripts": {
-    "dev": "nodemon script.ts"
+   "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint src/ --cache --fix",
+    "test": "jest",
+    "build": "tsc",
+    "build:dev": "tsc --watch",
+    "start": "node --enable-source-maps dist/server.js",
+    "start:dev": "nodemon --watch dist/ --watch .env",
+    "dev": "npm run build && concurrently 'npm:build:dev' 'npm:start:dev'",
+    "web": "serve -p 8080 web/"
   },
   "devDependencies": {
     "@types/express": "^4.17.14",
